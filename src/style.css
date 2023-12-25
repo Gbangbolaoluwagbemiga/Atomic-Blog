@@ -205,8 +205,8 @@ aside li button {
   }
 
   form {
+    flex-direction: column;
     padding: 1rem;
-    display: flex;
     gap: 24px;
     margin-bottom: 2rem;
   }
@@ -226,8 +226,20 @@ aside li button {
     padding: 8px;
   }
 
+  textarea {
+    flex: 1;
+    height: 3.5rem;
+  }
+
+  header button,
+  button {
+    font-weight: 700;
+    padding: 6px;
+    font-size: 12px;
+  }
+
   input {
-    width: 5rem;
+    width: 100%;
   }
 
   main ul {
