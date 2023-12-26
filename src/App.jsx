@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {faker} from '@faker-js/faker';
 import Header from './component/Header';
+import Main from './component/Main';
 
 function createRandomPost() {
   return {
@@ -61,17 +62,6 @@ function App() {
       <Archive onAddPost={handleAddPost} />
       <Footer />
     </section>
-  );
-}
-
-
-
-function Main({posts, onAddPost}) {
-  return (
-    <main>
-      <FormAddPost onAddPost={onAddPost} />
-      <Posts posts={posts} />
-    </main>
   );
 }
 
