@@ -20,9 +20,9 @@ body {
 }
 
 .btn-fake-dark-mode {
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  right: 0;
+  right: 0; */
   padding: 16px;
   line-height: 1;
   font-size: 26px;
@@ -192,6 +192,9 @@ aside li button {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
+  }
+  .header {
+    font-size: 0.85rem;
   }
 
   header div {

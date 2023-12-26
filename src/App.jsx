@@ -17,7 +17,6 @@ function App() {
     Array.from({length: 30}, () => createRandomPost())
   );
   const [searchQuery, setSearchQuery] = useState('');
-  const [isFakeDark, setIsFakeDark] = useState(false);
 
   // Derived state. These are the posts that will actually be displayed
   const searchedPosts =
@@ -38,22 +37,9 @@ function App() {
   }
 
   // Whenever `isFakeDark` changes, we toggle the `fake-dark-mode` class on the HTML element (see in "Elements" dev tool).
-  useEffect(
-    function () {
-      document.documentElement.classList.toggle('fake-dark-mode');
-    },
-    [isFakeDark]
-  );
 
   return (
     <section>
-      <button
-        onClick={() => setIsFakeDark(isFakeDark => !isFakeDark)}
-        className="btn-fake-dark-mode"
-      >
-        {isFakeDark ? '☀️' : '🌙'}
-      </button>
-
       <Header
         posts={searchedPosts}
         onClearPosts={handleClearPosts}
