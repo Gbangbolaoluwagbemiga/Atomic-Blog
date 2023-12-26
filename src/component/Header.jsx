@@ -1,3 +1,5 @@
+import SearchPosts from './SearchPost';
+
 function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
   return (
     <header>
