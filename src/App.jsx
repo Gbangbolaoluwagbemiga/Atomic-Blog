@@ -18,7 +18,6 @@ function App() {
   );
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Derived state. These are the posts that will actually be displayed
   const searchedPosts =
     searchQuery.length > 0
       ? posts.filter(post =>
@@ -35,8 +34,6 @@ function App() {
   function handleClearPosts() {
     setPosts([]);
   }
-
-  // Whenever `isFakeDark` changes, we toggle the `fake-dark-mode` class on the HTML element (see in "Elements" dev tool).
 
   return (
     <section>
