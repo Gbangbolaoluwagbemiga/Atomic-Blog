@@ -253,7 +253,7 @@ aside li button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 32px;
+    padding: 0;
   }
 
   .search-post,
@@ -267,7 +267,7 @@ aside li button {
     border-radius: 0.75rem;
   }
   .hamburger {
-    font-size: 0.5rem;
+    font-size: 0.55rem;
     border: none;
   }
 }
