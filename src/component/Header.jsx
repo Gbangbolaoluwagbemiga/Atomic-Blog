@@ -1,3 +1,4 @@
+import Results from './Results';
 import SearchPosts from './SearchPost';
 
 function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
