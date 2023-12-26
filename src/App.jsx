@@ -65,13 +65,7 @@ function App() {
   );
 }
 
-function Posts({posts}) {
-  return (
-    <section>
-      <List posts={posts} />
-    </section>
-  );
-}
+
 
 function FormAddPost({onAddPost}) {
   const [title, setTitle] = useState('');
