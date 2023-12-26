@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 function FormAddPost({onAddPost}) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
