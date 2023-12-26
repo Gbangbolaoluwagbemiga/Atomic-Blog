@@ -33,7 +33,7 @@ function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
           <span>⚛️</span>The Atomic Blog
         </h1>{' '}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler hamburger"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -50,16 +50,18 @@ function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />
-          <button className="ms-auto" onClick={onClearPosts}>
-            Clear posts
-          </button>
+          <div className="d-flex justify-content-between ms-md-3">
+            <button className=" clear-post " onClick={onClearPosts}>
+              Clear posts
+            </button>
 
-          <button
-            onClick={() => setIsFakeDark(isFakeDark => !isFakeDark)}
-            className="btn-fake-dark-mode ms-auto"
-          >
-            {isFakeDark ? '☀️' : '🌙'}
-          </button>
+            <button
+              onClick={() => setIsFakeDark(isFakeDark => !isFakeDark)}
+              className="btn-fake-dark-mode ms-md-3"
+            >
+              {isFakeDark ? '☀️' : '🌙'}
+            </button>
+          </div>
         </div>
       </div>
     </nav>

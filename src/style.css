@@ -20,9 +20,6 @@ body {
 }
 
 .btn-fake-dark-mode {
-  /* position: fixed;
-  top: 0;
-  right: 0; */
   padding: 16px;
   line-height: 1;
   font-size: 26px;
@@ -188,6 +185,12 @@ aside li button {
     margin: 0 auto;
   }
 
+  .btn-fake-dark-mode {
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+  }
+
   header {
     display: flex;
     flex-direction: column;
@@ -251,5 +254,20 @@ aside li button {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 32px;
+  }
+
+  .search-post,
+  .btn-fake-dark-mode,
+  .clear-post {
+    margin-bottom: 1rem;
+  }
+
+  .search-post,
+  .clear-post {
+    border-radius: 0.75rem;
+  }
+  .hamburger {
+    font-size: 0.5rem;
+    border: none;
   }
 }
