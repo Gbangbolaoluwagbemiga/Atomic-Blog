@@ -27,12 +27,11 @@ function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
     //   </div>
     // </header>
 
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <h1 className="header">
           <span>⚛️</span>The Atomic Blog
         </h1>{' '}
-        <Results posts={posts} />
         <button
           className="navbar-toggler"
           type="button"
@@ -45,15 +44,19 @@ function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
+          <Results posts={posts} />
+
           <SearchPosts
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />
-          <button onClick={onClearPosts}>Clear posts</button>
+          <button className="ms-auto" onClick={onClearPosts}>
+            Clear posts
+          </button>
 
           <button
             onClick={() => setIsFakeDark(isFakeDark => !isFakeDark)}
-            className="btn-fake-dark-mode"
+            className="btn-fake-dark-mode ms-auto"
           >
             {isFakeDark ? '☀️' : '🌙'}
           </button>
