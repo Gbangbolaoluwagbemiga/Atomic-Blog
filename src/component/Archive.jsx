@@ -1,6 +1,9 @@
-import {useState} from 'react';
+import {useContext, useState} from 'react';
+import {PostContext} from '../App';
 
-function Archive({onAddPost, createRandomPost}) {
+function Archive() {
+  const {onAddPost, createRandomPost} = useContext(PostContext);
+
   const [posts] = useState(() =>
     Array.from({length: 10}, () => createRandomPost())
   );

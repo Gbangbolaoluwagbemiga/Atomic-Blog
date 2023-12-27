@@ -4,7 +4,6 @@ import Header from './component/Header';
 import Main from './component/Main';
 import Footer from './component/Footer';
 import Archive from './component/Archive';
-import SearchPosts from './component/SearchPost';
 
 function createRandomPost() {
   return {
@@ -46,15 +45,13 @@ function App() {
         onAddPost: handleAddPost,
         searchQuery,
         setSearchQuery,
+        createRandomPost,
       }}
     >
       <section>
         <Header />
         <Main />
-        <Archive
-          onAddPost={handleAddPost}
-          createRandomPost={createRandomPost}
-        />
+        <Archive />
         <Footer />
       </section>
     </PostContext.Provider>
