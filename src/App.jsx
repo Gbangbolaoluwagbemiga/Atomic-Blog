@@ -37,17 +37,17 @@ function App() {
     setPosts([]);
   }
 
+  const Props = {
+    posts: searchedPosts,
+    onClearPosts: handleClearPosts,
+    onAddPost: handleAddPost,
+    searchQuery,
+    setSearchQuery,
+    createRandomPost,
+  };
+
   return (
-    <PostContext.Provider
-      value={{
-        posts: searchedPosts,
-        onClearPosts: handleClearPosts,
-        onAddPost: handleAddPost,
-        searchQuery,
-        setSearchQuery,
-        createRandomPost,
-      }}
-    >
+    <PostContext.Provider value={Props}>
       <section>
         <Header />
         <Main />
