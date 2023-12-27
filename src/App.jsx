@@ -4,6 +4,7 @@ import Header from './component/Header';
 import Main from './component/Main';
 import Footer from './component/Footer';
 import Archive from './component/Archive';
+import SearchPosts from './component/SearchPost';
 
 function createRandomPost() {
   return {
@@ -38,17 +39,30 @@ function App() {
   }
 
   return (
-    <section>
-      <Header
-        posts={searchedPosts}
-        onClearPosts={handleClearPosts}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
-      <Main posts={searchedPosts} onAddPost={handleAddPost} />
-      <Archive onAddPost={handleAddPost} createRandomPost={createRandomPost} />
-      <Footer />
-    </section>
+    <PostContext.Provider
+      value={{
+        posts: SearchPosts,
+        onClearPosts: handleClearPosts,
+        onAddPost: handleAddPost,
+        searchQuery,
+        setSearchQuery,
+      }}
+    >
+      <section>
+        <Header
+          posts={searchedPosts}
+          onClearPosts={handleClearPosts}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+        />
+        <Main posts={searchedPosts} onAddPost={handleAddPost} />
+        <Archive
+          onAddPost={handleAddPost}
+          createRandomPost={createRandomPost}
+        />
+        <Footer />
+      </section>
+    </PostContext.Provider>
   );
 }
 
