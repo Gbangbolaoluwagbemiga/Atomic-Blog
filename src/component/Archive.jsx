@@ -11,13 +11,13 @@ function Archive({onAddPost, createRandomPost}) {
 
   return (
     <aside>
-      <h2>Post archive</h2>
+      <h2 className="Archive text-center fw-bolder">Post archive</h2>
       <button onClick={() => setShowArchive(s => !s)}>
         {showArchive ? 'Hide archive posts' : 'Show archive posts'}
       </button>
 
       {showArchive && (
-        <ul>
+        <ul className="Archive-list">
           {posts.map((post, i) => (
             <li key={i}>
               <p>

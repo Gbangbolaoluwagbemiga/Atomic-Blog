@@ -253,6 +253,10 @@ aside li button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  main ul,
+  .Archive-list {
     padding: 0;
   }
 
@@ -267,7 +271,30 @@ aside li button {
     border-radius: 0.75rem;
   }
   .hamburger {
-    font-size: 0.55rem;
+    font-size: 0.75rem;
     border: none;
+  }
+  .hamburger:focus {
+    outline: none;
+    box-shadow: 0 0 5px wheat;
+  }
+
+  .Archive {
+    font-size: 1rem;
+  }
+
+  aside li {
+    padding: 4px 5px;
+  }
+
+  aside li button {
+    padding: 4px;
+    font-size: 12px;
+    width: 15rem;
+    margin-left: 5px;
+  }
+
+  aside li p {
+    width: 30rem;
   }
 }
