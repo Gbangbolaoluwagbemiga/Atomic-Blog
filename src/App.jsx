@@ -13,7 +13,7 @@ function createRandomPost() {
   };
 }
 
-const PostContext = createContext();
+export const PostContext = createContext();
 
 function App() {
   const [posts, setPosts] = useState(() =>
@@ -41,7 +41,7 @@ function App() {
   return (
     <PostContext.Provider
       value={{
-        posts: SearchPosts,
+        posts: searchedPosts,
         onClearPosts: handleClearPosts,
         onAddPost: handleAddPost,
         searchQuery,
@@ -49,12 +49,7 @@ function App() {
       }}
     >
       <section>
-        <Header
-          posts={searchedPosts}
-          onClearPosts={handleClearPosts}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-        />
+        <Header />
         <Main posts={searchedPosts} onAddPost={handleAddPost} />
         <Archive
           onAddPost={handleAddPost}

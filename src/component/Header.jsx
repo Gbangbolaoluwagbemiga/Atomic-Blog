@@ -1,8 +1,9 @@
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import Results from './Results';
 import SearchPosts from './SearchPost';
+import {PostContext} from '../App';
 
-function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
+function Header() {
   const [isFakeDark, setIsFakeDark] = useState(false);
 
   useEffect(
@@ -11,6 +12,8 @@ function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
     },
     [isFakeDark]
   );
+
+  const {onClearPosts} = useContext(PostContext);
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -30,12 +33,8 @@ function Header({posts, onClearPosts, searchQuery, setSearchQuery}) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <Results posts={posts} />
-
-          <SearchPosts
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-          />
+          <Results />
+          <SearchPosts />
           <div className="d-flex justify-content-between ms-md-3">
             <button className=" clear-post " onClick={onClearPosts}>
               Clear posts
