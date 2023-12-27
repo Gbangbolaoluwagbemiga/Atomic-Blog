@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {createContext, useState} from 'react';
 import {faker} from '@faker-js/faker';
 import Header from './component/Header';
 import Main from './component/Main';
@@ -11,6 +11,8 @@ function createRandomPost() {
     body: faker.hacker.phrase(),
   };
 }
+
+const PostContext = createContext();
 
 function App() {
   const [posts, setPosts] = useState(() =>
