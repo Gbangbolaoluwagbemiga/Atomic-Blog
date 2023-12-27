@@ -4,8 +4,8 @@ import Posts from './Posts';
 function Main({posts, onAddPost}) {
   return (
     <main>
-      <FormAddPost onAddPost={onAddPost} />
-      <Posts posts={posts} />
+      <FormAddPost />
+      <Posts />
     </main>
   );
 }

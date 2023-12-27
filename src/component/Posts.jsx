@@ -1,6 +1,10 @@
+import {useContext} from 'react';
+import {PostContext} from '../App';
 import List from './List';
 
-function Posts({posts}) {
+function Posts() {
+  const {posts} = useContext(PostContext);
+
   return (
     <section>
       <List posts={posts} />

@@ -50,7 +50,7 @@ function App() {
     >
       <section>
         <Header />
-        <Main posts={searchedPosts} onAddPost={handleAddPost} />
+        <Main />
         <Archive
           onAddPost={handleAddPost}
           createRandomPost={createRandomPost}
