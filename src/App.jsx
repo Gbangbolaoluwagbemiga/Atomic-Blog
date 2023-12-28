@@ -18,6 +18,7 @@ function App() {
   const [posts, setPosts] = useState(() =>
     Array.from({length: 30}, () => createRandomPost())
   );
+
   const [searchQuery, setSearchQuery] = useState('');
 
   const searchedPosts =
