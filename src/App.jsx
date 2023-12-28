@@ -48,14 +48,14 @@ function App() {
   };
 
   return (
-    <PostContext.Provider value={Props}>
-      <section>
+    <section>
+      <PostContext.Provider value={Props}>
         <Header />
         <Main />
         <Archive />
         <Footer />
-      </section>
-    </PostContext.Provider>
+      </PostContext.Provider>
+    </section>
   );
 }
 
