@@ -213,7 +213,7 @@ aside li button {
   form {
     flex-direction: column;
     padding: 1rem;
-    gap: 22rem;
+    gap: 24px;
     margin-bottom: 2rem;
   }
 
