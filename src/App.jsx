@@ -3,7 +3,7 @@ import {faker} from '@faker-js/faker';
 import Header from './component/Header';
 import Main from './component/Main';
 import Footer from './component/Footer';
-import Archive from './component/Archive';
+// import Archive from './component/Archive';
 
 function createRandomPost() {
   return {
